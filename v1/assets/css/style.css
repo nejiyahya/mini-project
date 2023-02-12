@@ -1,0 +1,257 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap');
+
+body {
+  background-color: #f5f4f8;
+  font-family: 'Nunito Sans', sans-serif;
+  margin: 0;
+}
+
+h1,.h1{
+  font-size: 1.125rem;
+  font-weight: 800;
+}
+a{
+  outline: unset;
+  color: #757575;
+  text-decoration: none !important;
+}
+
+.text-left{
+  text-align: left !important;
+}
+.bg-primary{
+  background: #01959F !important;
+}
+
+/* FORM */
+.form-control{
+  border: 2px solid #E0E0E0;
+  border-radius: 8px;
+}
+.form-control:focus{
+  border: 2px solid #01959F;
+  box-shadow:unset;
+}
+/* END FORM */
+
+/* BUTTON */
+.btn{
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  box-shadow: unset !important;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12) !important;
+}
+.btn.no-shadow{
+  box-shadow: unset !important;
+}
+
+.btn-primary, .btn-primary.active, .btn-primary:active,.btn-primary:focus, .btn-primary:hover{
+  background-color: #01959F;
+  color: #FFFFFF;
+  border: unset;
+}
+.btn-secondary, .btn-secondary.active, .btn-secondary:active,.btn-secondary:focus , .btn-secondary:hover{
+  border: 1px solid #E0E0E0;
+  background-color: #fff;
+  color: #1D1F20;
+}
+.btn-light-secondary{
+  font-weight: 400;
+  font-size: 12px;
+  color: #1D1F20;
+}
+.dropdown-item{
+  font-weight: 600;
+  font-size: 14px;
+}
+.dropdown-item:focus, .dropdown-item:hover,
+.dropdown-item.active, .dropdown-item:active{
+  background: unset !important;
+  color: #01959F;
+}
+.dropdown-item.delete-task:focus, .dropdown-item.delete-task:hover,
+.dropdown-item.delete-task.active, .dropdown-item.delete-task:active{
+  color: #E11428;
+}
+
+.task-kanban-container {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+  min-height: 85vh;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+/* END BUTTON */
+
+.task-kanban-container::-webkit-scrollbar {
+  display: none;
+}
+.task-kanban-container .task-list {
+  position: relative;
+}
+.task-kanban-container .task-list:before {
+  content: "";
+  font-weight: 600;
+  line-height: 110px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+.task-kanban-container .task-kanban {
+  position: relative;
+}
+.task-kanban-container .task-kanban .task {
+  margin-bottom: 1rem;
+  white-space: normal;
+  background: #FAFAFA;
+  border: 1px solid #E0E0E0;
+  border-radius: 4px;
+  position: relative;
+}
+.task-kanban-container .task-kanban .task:last-child{
+  margin-bottom: 0px;
+}
+.task-kanban-container .task-kanban>div {
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 40px;
+}
+.task-container.no-task{
+  border: 1px solid #E0E0E0;
+  background: #FAFAFA;
+  border-radius: 4px;
+  position: relative;
+}
+.task-container.no-task::before{
+  content: 'No Task';
+  color: #757575;
+  font-size: 14px;
+  font-weight: 400;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 8px 16px;
+  z-index: 0;
+}
+
+/* TASK GROUP */
+.task-group {
+  word-wrap: break-word;
+  background-clip: border-box;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  position: relative;
+  width: 20.375rem;
+  border-radius: 4px;
+}
+.task-group.task-group-style-1{
+  background: #F7FEFF;
+  border: 1px solid #01959F;
+}
+.task-group.task-group-style-2{
+  background: #FFFCF5;
+  border: 1px solid #FEEABC;
+}
+.task-group.task-group-style-3{
+  background: #FFFAFA;
+  border: 1px solid #F5B1B7;
+}
+.task-group.task-group-style-4{
+  background: #F8FBF9;
+  border: 1px solid #B8DBCA;
+}
+.task-group .group-name{
+  font-weight: 400;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.task-group.task-group-style-1 .group-name{
+  color: #01959F;
+  border: 1px solid #4DB5BC;
+}
+.task-group.task-group-style-2 .group-name{
+  color: #FA9810;
+  border: 1px solid #FEEABC;
+}
+.task-group.task-group-style-3 .group-name{
+  color: #E11428;
+  border: 1px solid #F5B1B7;
+}
+.task-group.task-group-style-4 .group-name{
+  color: #43936C;
+  border: 1px solid #B8DBCA;
+}
+
+.task-group .group-description{
+  font-weight: 700;
+  font-size: 12px;
+  color: #404040;
+}
+.task-group:first-child .move-left{
+  display: none !important;
+}
+.task-group:last-child .move-right{
+ display: none !important; 
+}
+/* END TASK GROUP */
+
+
+.task-body {
+  flex: 1 1 auto;
+  padding: 1.5rem;
+}
+.task-body .task-name{
+  font-weight: 700;
+  font-size: 14px;
+  color: #404040;
+  border-bottom: 1px dashed #E0E0E0;
+  padding-bottom: 5px;
+}
+.task-body .task-status{
+  padding-left: 8px;
+  padding-right: 10px;
+  font-weight: 400;
+  font-size: 12px;
+  color: #757575;
+}
+.task-body .task-status i{
+  color: #198754!important;
+  font-size: 16px;
+}
+.task-body .progress{
+  background: #EDEDED;
+  border-radius: 35px;
+}
+
+/* MODAL */
+.modal-header{
+  border: unset;
+  padding: 24px;
+}
+.modal-content{
+  background: #FFFFFF;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.modal-title{
+  font-weight: 700;
+  font-size: 18px;
+}
+.modal-body{
+  padding: 0 24px;
+}
+.modal-footer{
+  border: unset;
+}
+/* END MODAL */
