@@ -137,7 +137,10 @@
 	<script src="assets/js/common.js"></script>
 	<script src="assets/js/main.js"></script>
 	<script type="text/javascript">
-		var main = new Main();
+		var main;
+		$(document).ready(function(e){
+			main = new Main();
+		});
 	</script>
 </body>
 </html>
